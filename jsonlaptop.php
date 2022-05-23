@@ -2,7 +2,7 @@
     require "dbConnect.php";
     try {
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        $stmt = $conn ->prepare('SELECT loaisp.idloaisp, sanpham.tensp, sanpham.giasp, sanpham.hinhanhsp from loaisp,sanpham where loaisp.idloaisp = sanpham.idloaisp and loaisp.idloaisp = 2');
+        $stmt = $conn ->prepare('SELECT loaisp.idloaisp, sanpham.tensp, sanpham.giasp, sanpham.hinhanhsp from loaisp,sanpham where loaisp.idloaisp = sanpham.idloaisp and loaisp.idloaisp = 1');
         //Thiết lập kiểu dữ liệu trả về
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
